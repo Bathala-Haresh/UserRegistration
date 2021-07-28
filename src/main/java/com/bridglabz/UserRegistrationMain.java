@@ -1,3 +1,4 @@
+
 /**
  * @author Bathala Haresh
  * @since 28/07/2021
@@ -26,6 +27,11 @@ public class UserRegistrationMain {
 		String lastName=sc.next();
 		userRegistrationimpl.lastNameValidate(lastName);
 
+		System.out.println("Enter your email : ");
+		String email=sc.next();
+		userRegistrationimpl.emailValidate(email);
+		
 	}
 
 }
+

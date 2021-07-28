@@ -1,4 +1,3 @@
-
 /**
  * @author Bathala Haresh
  * @since 28/07/2021
@@ -11,5 +10,6 @@ public interface UserRegistrartion
 {
 	void firstNameValidate(String firstName);
 	void lastNameValidate(String lastName);
+	void emailValidate(String email);
 
 }

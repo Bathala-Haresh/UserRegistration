@@ -1,3 +1,4 @@
+
 /**
  * @author Bathala Haresh
  * @since 28/07/2021
@@ -56,5 +57,21 @@ public class UserRegistrationimpl implements UserRegistrartion{
 		}
 
 	}
+	/*
+	 * Purpose: method to validate email.
+	 * Condition for regex is, email has 3 mandatory parts that should be followed
+	 *
+	 * @param email: takes the email argument given by user 
+	 */
 
+	@Override
+	public void emailValidate(String email) {
+		Pattern pattern=Pattern.compile("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$");
+		Matcher matcher=pattern.matcher(email);
+
+		if (matcher.matches())
+			System.out.println("You entered email  is valid");
+		else
+			System.out.println("You entered email is invalid");
+	}
 }
