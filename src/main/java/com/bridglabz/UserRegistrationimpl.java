@@ -30,5 +30,31 @@ public class UserRegistrationimpl implements UserRegistrartion{
 		{
 			System.out.println("You entered " +firstName +" is invalid");
 		}
+
+
 	}
+	/*
+	 * Purpose: method to validate last name.
+	 * Condition for regex is, last name should start 
+	 * with capital letter and name should have minimum 3 letters.
+	 *
+	 * @param lastName: takes the last name argument  given by user 
+	 */
+
+	@Override
+	public void lastNameValidate(String lastName) {
+
+		Pattern pattern=Pattern.compile("^[A-Z]{1}[a-z]{3,20}$");
+		Matcher matcher=pattern.matcher(lastName);
+		if (matcher.matches())
+		{
+			System.out.println("You entered " +lastName +" is valid");
+		}
+		else
+		{
+			System.out.println("You entered " +lastName +" is invalid");
+		}
+
+	}
+
 }
