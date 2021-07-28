@@ -10,6 +10,7 @@ public interface UserRegistrartion
 {
 	void firstNameValidate(String firstName);
 	void lastNameValidate(String lastName);
+	void phoneNumberValidate();
 	void emailValidate(String email);
 
 }

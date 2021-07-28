@@ -30,6 +30,8 @@ public class UserRegistrationMain {
 		System.out.println("Enter your email : ");
 		String email=sc.next();
 		userRegistrationimpl.emailValidate(email);
+
+		userRegistrationimpl.phoneNumberValidate();
 		
 	}
 

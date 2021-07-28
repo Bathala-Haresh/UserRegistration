@@ -58,6 +58,27 @@ public class UserRegistrationimpl implements UserRegistrartion{
 
 	}
 	/*
+	 * Purpose: method to validate valid phoneNumber .
+	 * Condition for regex is, country code followed by space and 10 digit number
+	 *  
+	 */
+
+	@Override
+	public void phoneNumberValidate() {
+		@SuppressWarnings("resource")
+		Scanner sc=new Scanner(System.in);
+		Pattern pattern=Pattern.compile("^[0-9]{2}[\\s][0-9]{10}$");
+
+		System.out.println("Enter your Phone Number : ");
+		String phoneNumber=sc.nextLine();
+		Matcher matcher=pattern.matcher(phoneNumber);
+
+		if (matcher.matches())
+			System.out.println("You entered Phone Number  is valid");
+		else
+			System.out.println("You entered Phone Number is invalid");
+	}
+	/*
 	 * Purpose: method to validate email.
 	 * Condition for regex is, email has 3 mandatory parts that should be followed
 	 *
