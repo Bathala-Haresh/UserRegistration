@@ -95,4 +95,31 @@ public class UserRegistrationimpl implements UserRegistrartion{
 		else
 			System.out.println("You entered email is invalid");
 	}
+	/*
+	 * Purpose: method to validate password.
+	 * Condition for regex is:
+	 * minimum 8 characters 
+	 * should have atleast 1 upper case
+	 * should have atleast 1 numeric number
+	 * has exactly 1 special character
+	 * should clear all email samples
+	 * @param password: takes the password argument given by user 
+	 */
+
+	@Override
+	public void passwordValidate(String password) {		
+
+		Pattern pattern=Pattern.compile("^(?=.{8,20})(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=]).*$");
+		Matcher matcher=pattern.matcher(password);
+
+		if (matcher.matches())
+			System.out.println("You entered email  is valid");
+		else
+			System.out.println("You entered email is invalid");
+
+
+	}
+
 }
+
+

@@ -12,5 +12,6 @@ public interface UserRegistrartion
 	void lastNameValidate(String lastName);
 	void phoneNumberValidate();
 	void emailValidate(String email);
+	void passwordValidate(String password);
 
 }
