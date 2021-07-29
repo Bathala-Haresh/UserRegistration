@@ -1,6 +1,6 @@
 /**
  * @author Bathala Haresh
- * @since 28/07/2021
+ * @since 29/07/2021
  * Purpose: USER REGISTRATION PROBLEM: user registrartion problem needs to ensure all validations are in place during the user entry
  */
 package com.bridglabz;
@@ -33,8 +33,11 @@ public class UserRegistrationMain {
 		System.out.println("Enter your Password : ");
 		String password=sc.next();
 		userRegistrationimpl.passwordValidate(password);
+		
 
-		userRegistrationimpl.phoneNumberValidate();
+		System.out.println("Enter your PhoneNumber : ");
+		String phoneNumber=sc.next();
+		userRegistrationimpl.phoneNumberValidate(phoneNumber);
 		
 	}
 
